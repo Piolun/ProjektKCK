@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 Readme Pioluna:
 @Linux:
 git clone, adres repozytorium
@@ -11,8 +10,7 @@ git commit -a -m 'wiadomosc commita'
 
 Ridmeh of prodżekt
 
-uno 
-dos 
-tres
-
-quatro
+-uno 
+-dos 
+-tres
+-quatro
