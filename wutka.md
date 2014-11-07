@@ -1,2 +1,0 @@
-CENZURA
-weekendowe wójitsu
