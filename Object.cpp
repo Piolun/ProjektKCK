@@ -4,9 +4,9 @@
 
 Object::Object(Figure* a, Color* b, int posX, int posY )
 {
-    //position = QPointF(a->points.rx()+posX,a->points.ry()+posY); //Jak się bawić tabelkami? ._.
-
-
+    position = a->polygon;
+    position.translate(posX, posY);
+    color = b->kolor;
 
 
 

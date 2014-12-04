@@ -39,71 +39,28 @@ void Scene::paintEvent(QPaintEvent *paintEvent)
     QPainter painter(this);
 
 
-    /*
-    //nie działało
-    QTransform up;
-    QTransform down;
-    down.rotate(180);
-    QTransform left;
-    left.rotate(90);
-    QTransform right;
-    right.rotate(270);
-
-
-
-    int Xtrojkat=50;
-    int Ytrojkat=50;
-    QImage trojkat(":/trójkątrównoboczny.png");
-
-    int Xkwadrat=100;
-    int Ykwadrat=50;
-    QImage kwadrat(":/kwadrat.png");
-
-    int Xokrag=150;
-    int Yokrag=50;
-    QImage okrag(":/okrąg.png");
-
-    painter.drawImage(QPoint(Xtrojkat,Ytrojkat), trojkat);
-    painter.drawImage(QPoint(Xkwadrat,Ykwadrat), kwadrat);
-    painter.drawImage(QPoint(Xokrag,Yokrag), okrag);
-    */
-
-
-    //color* Zielony = new color(0, 255, 0);
-
     Color* niebieski = new Color(0,0,255);
     Color* zielony = new Color (0,255,0);
     Color* czerwony = new Color (255,0,0);
     Color* rozowy = new Color (255,0,255);
-
-    painter.setPen(QPen(rozowy->kolor, 5)); // 5 - grubość pędzla
-
-    static const QPointF points[4] = {
-        QPointF(10.0, 80.0),
-        QPointF(20.0, 10.0),
-        QPointF(80.0, 30.0),
-        QPointF(90.0, 70.0)
-    };
-    painter.drawConvexPolygon(points, 4);
+    Color* zolty = new Color (255,255,0);
 
 
-    painter.setPen(QPen(zielony->kolor,5)); // 5 - grubość pędzla
 
-    static const QPointF pointz[4] = {
-        QPointF(50.0, 190.0),
-        QPointF(120.0, 190.0),
-        QPointF(120.0, 280.0),
-        QPointF(50.0, 280.0)
-    };
+    QPolygon temp;
+    temp.setPoints(4, 0, 0, 100, 0, 100, 100, 0, 100);
+    Figure* kwadrat = new Figure("kwadrat", temp);
 
-    painter.drawConvexPolygon(pointz, 4);
+    Object* kwadrat1 = new Object(kwadrat,rozowy,0,0);
+    Object* kwadrat2 = new Object(kwadrat,niebieski,30,30);
+    Object* kwadrat3 = new Object(kwadrat,zielony,100,100);
 
 
     foreach(Object* o, Objects)
     {
 
-
-        //painter.drawConvexPolygon(o->position, 4);  // ._.
+        painter.setPen(QPen(o->color, 5));
+        painter.drawConvexPolygon(o->position);  // yaay
     }
 
 }

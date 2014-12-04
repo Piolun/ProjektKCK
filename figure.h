@@ -1,15 +1,15 @@
 #ifndef FIGURE_H
 #define FIGURE_H
 #include <QKeyEvent>
-
+#include <QPolygon>
 
 class Figure
 {
 public:
-    Figure(QString names, QPointF points[]);
+    Figure(QString names, QPolygon points);
     QString name;
     QStringList synonyms;
-    QPointF points; // współrzędne lokalne tworzące daną figurę
+    QPolygon polygon; // współrzędne lokalne tworzące daną figurę
 
 
 };

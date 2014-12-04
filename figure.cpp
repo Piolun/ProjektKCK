@@ -1,11 +1,11 @@
 #include "figure.h"
 
 
-Figure::Figure(QString names,QPointF points[])
+Figure::Figure(QString names,QPolygon points)
 {
 
     QStringList synonyms = names.split(" ");
-
+    polygon = QPolygon(points);
 }
 
 
