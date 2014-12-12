@@ -21,6 +21,7 @@ public:
 
 
     QList<Object*> Objects;
+    QList<word*> Dictionary;
     void CheckAllCollisions();
 
     void Repaint();

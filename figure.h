@@ -2,13 +2,12 @@
 #define FIGURE_H
 #include <QKeyEvent>
 #include <QPolygon>
+#include "word.h"
 
-class Figure
+class Figure : public word
 {
 public:
     Figure(QString names, QPolygon points);
-    QString name;
-    QStringList synonyms;
     QPolygon polygon; // współrzędne lokalne tworzące daną figurę
 
 

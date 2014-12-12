@@ -18,7 +18,8 @@ SOURCES += main.cpp\
     scene.cpp \
     Object.cpp \
     Color.cpp \
-    figure.cpp
+    figure.cpp \
+    word.cpp
 
 HEADERS  += mainwindow.h \
     scene.h \
@@ -26,7 +27,8 @@ HEADERS  += mainwindow.h \
     drawable.h \
     Object.h \
     Color.h \
-    figure.h
+    figure.h \
+    word.h
 
 FORMS    += mainwindow.ui
 

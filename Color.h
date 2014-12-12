@@ -1,15 +1,15 @@
 #ifndef COLOR_H
 #define COLOR_H
 #include <QColor>
+#include "word.h"
 
 #include <QKeyEvent>
 
-class Color
+class Color : public word
 {
 public:
-    Color(int R, int G, int B, QString names = 0);
+    Color(int R, int G, int B, QString a);
 
-    QStringList synonyms;
     QColor kolor;
 };
 

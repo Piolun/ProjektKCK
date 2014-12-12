@@ -1,10 +1,9 @@
 #include <QKeyEvent>
 
 #include "Color.h"
+#include "word.h"
 
-Color::Color(int R, int G, int B, QString names)
+Color::Color(int R, int G, int B, QString a):word(a)
 {
-    QStringList synonyms = names.split(" ");
-
     kolor = QColor (R,G,B);
 }
