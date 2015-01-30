@@ -7,8 +7,10 @@ class word
 {
 public:
     word(QString a);
-    //QString names;
     QStringList names;
+
+    virtual QString nazwaklasy()=0;
+    ~word();
 };
 
 #endif // WORD_H

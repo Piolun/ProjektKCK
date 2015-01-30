@@ -1,5 +1,5 @@
-#ifndef COLOR_H
-#define COLOR_H
+#ifndef Color_H
+#define Color_H
 #include <QColor>
 #include "word.h"
 
@@ -11,6 +11,8 @@ public:
     Color(int R, int G, int B, QString a);
 
     QColor kolor;
+
+    QString nazwaklasy() override;
 };
 
-#endif // COLOR_H
+#endif // Color_H

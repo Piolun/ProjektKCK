@@ -3,15 +3,29 @@
 
 #include <QKeyEvent>
 #include "figure.h"
-#include "color.h"
+#include "Color.h"
 #include <QPolygon>
 
 class Object
 {
 public:
-    Object(Figure* a, Color* b, int X, int Y);
+    Object(QString a, QString b, int X, int Y);
     QPolygon position; // współrzędne globalne (X,Y) - tabela?
-    QColor color;
+    Color* color;
+    Figure* figure;
+
+    QString fname;
+    QString cname;
+
+    int xMin = std::numeric_limits<int>::max();
+    int xMax = std::numeric_limits<int>::min();
+    int yMin = std::numeric_limits<int>::max();
+    int yMax = std::numeric_limits<int>::min();
+
+    QList<QPoint> Bottomcenter;
+    QList<QPoint> Topcenter;
+
+    ~Object();
 
 };
 

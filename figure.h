@@ -10,7 +10,7 @@ public:
     Figure(QString names, QPolygon points);
     QPolygon polygon; // współrzędne lokalne tworzące daną figurę
 
-
+    QString nazwaklasy() override;
 };
 
 #endif // FIGURE_H

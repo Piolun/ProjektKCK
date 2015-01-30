@@ -3,9 +3,9 @@
 #include <QList>
 #include <QWidget>
 #include <QPainter>
-#include "drawable.h"
-#include "color.h"
+#include "Color.h"
 #include "object.h"
+#include "order.h"
 
 
 
@@ -17,12 +17,19 @@ public:
 
     static Scene* SceneInstance;
 
-    //color* Zielony;
+    //Color* Zielony;
 
 
     QList<Object*> Objects;
+    QList<Object*> TempObjects;
+    QList<Object*> ScriptObjects;
+    QList<word*> PotentialObjects;
     QList<word*> Dictionary;
-    void CheckAllCollisions();
+    QList<word*> inputI;
+
+    Order* uid;
+
+    QPoint pointer;
 
     void Repaint();
 private:

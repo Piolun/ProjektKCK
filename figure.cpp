@@ -6,6 +6,9 @@ Figure::Figure(QString a,QPolygon points):word(a)
     polygon = QPolygon(points);
 }
 
+QString Figure::nazwaklasy(){
+    return "figura";
+}
 
 /*
 

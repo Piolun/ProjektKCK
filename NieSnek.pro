@@ -14,21 +14,21 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    drawable.cpp \
     scene.cpp \
     Object.cpp \
     Color.cpp \
     figure.cpp \
-    word.cpp
+    word.cpp \
+    Order.cpp
 
 HEADERS  += mainwindow.h \
     scene.h \
     drawable \
-    drawable.h \
     Object.h \
     Color.h \
     figure.h \
-    word.h
+    word.h \
+    Order.h
 
 FORMS    += mainwindow.ui
 
